@@ -525,3 +525,30 @@ def embeddings_similarity(payload: SimilarityRequest) -> SimilarityResponse:
         results=results,
         notes=notes,
     )
+
+
+""" 
+Json Test Cases 
+1. Test case for /embeddings/demo endpoint
+{
+  "texts": ["Hello world!", "FastAPI is great for building APIs."]
+  "model": "char_26",
+  "normalize": true,
+  "return_debug": true
+}
+2. Test case for /embeddings/similarity endpoint
+{
+  "query": "What are embeddings?",
+  "documents": [
+    "Embeddings map text into a vector space.",
+    "Tokenization splits text into smaller units."
+  ],
+  "model": "word_hash_32",
+  "normalize": true,
+  "return_embeddings": true,
+  "top_k": 1,
+  "return_debug": false
+}
+
+
+"""
